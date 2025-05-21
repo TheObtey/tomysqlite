@@ -7,7 +7,7 @@ SQLiteDriver = {}
 SQLiteDriver.__index = SQLiteDriver
 
 /*
-    Create a new SQLiteDriver instance.
+    Creates a new SQLiteDriver instance.
 
     @return self (SQLiteDriver) - A new instance of SQLiteDriver
 */
@@ -17,14 +17,14 @@ function SQLiteDriver:new()
 end
 
 /*
-    Initialize the SQLiteDriver (no actual connection needed).
+    Initializes the SQLiteDriver (no actual connection needed).
 */
 function SQLiteDriver:connect()
     print("[TOMYSQLITE] Using internal SQLite database")
 end
 
 /*
-    Execute a SQL query
+    Executes a SQL query
 
     @param queryString (string) - The SQL query to execute
     @param params (table) - The parameters of the query (optional)
@@ -45,7 +45,7 @@ function SQLiteDriver:query(queryString, params, callback)
 end
 
 /*
-    Execute a query and returns a single value.
+    Executes a query and returns a single value.
 
     @param queryString (string) - The SQL query to execute
     @param params (table) - The parameters of the query (optional)
@@ -63,7 +63,7 @@ function SQLiteDriver:queryValue(queryString, params, callback)
 end
 
 /*
-    Execute a query and returns a full result set.
+    Executes a query and returns a full result set.
 
     @param queryString (string) - The SQL query to execute
     @param params (table) - The parameters of the query (optional)
@@ -74,7 +74,7 @@ function SQLiteDriver:queryAssoc(queryString, params, callback)
 end
 
 /*
-    Escape a value for use in a query.
+    Escapes a value to be safely used in a query
 
     @param value (string|number) - The value to escape
     @return escapedValue (string) - The escaped value
@@ -84,7 +84,7 @@ function SQLiteDriver:escape(value)
 end
 
 /*
-    Build the final query string with optionnal parameters.
+    Builds the final query string with optional parameters.
 
     @param queryString (string) - The query with placeholders ("?")
     @param params (table) - Values to insert into the query

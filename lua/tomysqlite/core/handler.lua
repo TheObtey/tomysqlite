@@ -1,7 +1,6 @@
 --[[
     SQLHandler is the main entrey point for tomysqlite.
-    It automatically selects the correct SQL driver (MySQL or SQLite)
-    and exposes a unified interface for executing queries.
+    It automatically selects the correct SQL driver (MySQL or SQLite) and exposes a unified interface for executing queries.
 --]]
 
 require("mysqloo")
@@ -32,18 +31,18 @@ function SQLHandler:new()
 end
 
 /*
-    Execute a raw SQL query.
+    Executes a raw SQL query.
 
     @param queryString (string) - The SQL query to execute
     @param params (table) - The parameters for the query (optional)
-    @param callback (function) - The function to call with result (optional)
+    @param callback (function) - The function to call with the result (optional)
 */
 function SQLHandler:query(queryString, params, callback)
     return self.driver:query(queryString, params, callback)
 end
 
 /*
-    Execute a query and returns a single value.
+    Executes a query and returns a single value.
 
     @param queryString (string) - The SQL query to execute
     @param params (table) - The parameters for the query (optional)
@@ -54,7 +53,7 @@ function SQLHandler:queryValue(queryString, params, callback)
 end
 
 /*
-    Execute a query and returns an associative table.
+    Executes a query and returns an associative table.
 
     @param queryString (string) - The SQL query to execute
     @param params (table) - The parameters for the query (optional)
@@ -65,7 +64,7 @@ function SQLHandler:queryAssoc(queryString, params, callback)
 end
 
 /*
-    Escape a value to be safely used in a query
+    Escapes a value to be safely used in a query
 
     @param value (string|number) - The value to escape
     @return escapedValue (string) - The escaped value

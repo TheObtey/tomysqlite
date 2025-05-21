@@ -9,7 +9,7 @@ MySQLDriver = {}
 MySQLDriver.__index = MySQLDriver
 
 /*
-    Create a new MySQLDriver instance.
+    Creates a new MySQLDriver instance.
 
     @return self (MySQLDriver) - A new instance of MySQLDriver
 */
@@ -32,7 +32,7 @@ function MySQLDriver:new()
 end
 
 /*
-    Establishe a connection to the MySQL database
+    Establishes a connection to the MySQL database
 */
 function MySQLDriver:connect()
     self.connection = mysqloo.connect(
@@ -62,7 +62,7 @@ function MySQLDriver:connect()
 end
 
 /*
-    Execute a SQL query
+    Executes a SQL query
 
     @param queryString (string) - The SQL query to execute
     @param params (table) - The parameters for the query (optional)
@@ -93,7 +93,7 @@ function MySQLDriver:query(queryString, params, callback)
 end
 
 /*
-    Execute a query and returns a single value.
+    Executes a query and returns a single value.
 
     @param queryString (string) - The SQL query to execute
     @param params (table) - The parameters for the query (optional)
@@ -111,7 +111,7 @@ function MySQLDriver:queryValue(queryString, params, callback)
 end
 
 /*
-    Execute a query and returns a full result set.
+    Executes a query and returns a full result set.
 
     @param queryString (string) - The SQL query to execute
     @param params (table) - The parameters for the query (optional)
@@ -122,7 +122,7 @@ function MySQLDriver:queryAssoc(queryString, params, callback)
 end
 
 /*
-    Escape a value for use in a query.
+    Escapes a value to be safely used in a query
 
     @param value (string|value) - The value to escape
     @return escapedValue (string) - The escaped value
@@ -132,7 +132,7 @@ function MySQLDriver:escape(value)
 end
 
 /*
-    Build the final query string with optional parameters.
+    Builds the final query string with optional parameters.
 
     @param queryString (string) - The query with placeholders ("?")
     @param params (table) - Values to insert into the query

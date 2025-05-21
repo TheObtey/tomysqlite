@@ -7,6 +7,7 @@ require("mysqloo")
 
 MySQLDriver = {}
 MySQLDriver.__index = MySQLDriver
+setmetatable(MySQLDriver, { __index = BaseDriver }) -- inherit from the BaseDriver
 
 /*
     Creates a new MySQLDriver instance.

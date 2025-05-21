@@ -1,7 +1,7 @@
-/*
+--[[
 	BaseDriver is an abstract class defining the structure of a SQL driver.
 	Both MySQLDriver and SQLiteDriver inherit from this and implement all its methods.
-*/
+--]]
 
 BaseDriver = {}
 BaseDriver.__index = BaseDriver

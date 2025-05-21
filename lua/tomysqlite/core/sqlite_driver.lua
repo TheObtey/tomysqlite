@@ -5,6 +5,7 @@
 
 SQLiteDriver = {}
 SQLiteDriver.__index = SQLiteDriver
+setmetatable(SQLiteDriver, { __index = BaseDriver }) -- inherit from the BaseDriver
 
 /*
     Creates a new SQLiteDriver instance.

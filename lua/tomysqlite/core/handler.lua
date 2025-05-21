@@ -36,7 +36,7 @@ end
 
     @param queryString (string) - The SQL query to execute
     @param params (table) - The parameters for the query (optional)
-    @param callback (function) - Function to call with result (optional)
+    @param callback (function) - The function to call with result (optional)
 */
 function SQLHandler:query(queryString, params, callback)
     return self.driver:query(queryString, params, callback)
@@ -47,7 +47,7 @@ end
 
     @param queryString (string) - The SQL query to execute
     @param params (table) - The parameters for the query (optional)
-    @param callback (function) - Function to call with the result (optional)
+    @param callback (function) - The function to call with the result (optional)
 */
 function SQLHandler:queryValue(queryString, params, callback)
     return self.driver:queryValue(queryString, params, callback)
@@ -58,7 +58,7 @@ end
 
     @param queryString (string) - The SQL query to execute
     @param params (table) - The parameters for the query (optional)
-    @param callback (function) - Function to call with the result (optional)
+    @param callback (function) - The function to call with the result (optional)
 */
 function SQLHandler:queryAssoc(queryString, params, callback)
     return self.driver:queryAssoc(queryString, params, callback)
